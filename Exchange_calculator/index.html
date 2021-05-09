@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exchange_Calculator</title>
+</head>
+<body>
+    <div>
+        <select name="base_currency" id="base">
+            <option value="EUR" selected>EUR</option>
+            <option value="INR">INR</option>
+        </select>
+        <select name="quote_currency" id="quote">
+            <option value="EUR">EUR</option>
+            <option value="INR" selected>INR</option>
+        </select>
+    </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

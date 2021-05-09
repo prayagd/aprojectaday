@@ -5,7 +5,7 @@ ticker.addEventListener("change", function(val){
     console.log(tickerVal)
     axios.get("https://api.twelvedata.com/stocks", {
         params: {
-            symbol: tickerVal,
+            symbol: tickerVal
         }
     })
          .then(function(response){
