@@ -3,20 +3,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Exchange_Calculator</title>
 </head>
 <body>
-    <div>
-        <select name="base_currency" id="base">
-            <option value="EUR" selected>EUR</option>
-            <option value="INR">INR</option>
-        </select>
-        <select name="quote_currency" id="quote">
-            <option value="EUR">EUR</option>
-            <option value="INR" selected>INR</option>
-        </select>
-    </div>
+        <div class="flex__container">
+            <div class="box">
+                <select name="base_currency" id="base">
+                    <option value="EUR" selected>EUR</option>
+                    <option value="INR">INR</option>
+                </select>
+                <input type="number" value="1" placeholder="0" id="toCurrency">
+            </div>
+            <div class="box">
+                <div id = "rate"></div>
+            </div>
+            <div class="box">
+                <select name="quote_currency" id="quote">
+                    <option value="EUR">EUR</option>
+                    <option value="INR" selected>INR</option>
+                </select>
+                <input type="number" placeholder="0" id="fromCurrency">
+            </div>
+        </div>
     <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>

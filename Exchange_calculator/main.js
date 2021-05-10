@@ -1,26 +1,34 @@
 let baseSelect = document.getElementById("base")
 let quoteSelect = document.getElementById("quote")
-axios.get("https://api.twelvedata.com/forex_pairs")
-     .then(function(response){
-         let currency = response.data.data
-         let currencyCheckArray = ["INR", "EUR"]
-         currency.map(function(val){
-            let opt = document.createElement("option");
-            let opt1 = document.createElement("option")
-            if(!currencyCheckArray.includes(val.symbol.slice(0, val.symbol.indexOf("/")))){
-                opt.value = val.symbol.slice(0, val.symbol.indexOf("/"))
-                opt.innerHTML = val.symbol.slice(0, val.symbol.indexOf("/"))
-                currencyCheckArray.push(val.symbol.slice(0, val.symbol.indexOf("/")))
-                baseSelect.appendChild(opt);
-                opt1.value = val.symbol.slice(0, val.symbol.indexOf("/"))
-                opt1.innerHTML = val.symbol.slice(0, val.symbol.indexOf("/"))
-                quoteSelect.appendChild(opt1)
-            }
-         })
-     })
+let toCurrencyInput = document.getElementById("toCurrency")
+let fromCurrencyInput = document.getElementById("fromCurrency")
+let rateIndicator = document.getElementById("rate")
+
+fetch("https://api.twelvedata.com/forex_pairs")
+    .then(res => res.json())
+    .then(function(response){
+        let currency = response.data
+        let currencyCheckArray = ["INR", "EUR"]
+        currency.map(function(val){
+           let opt = document.createElement("option");
+           let opt1 = document.createElement("option")
+           if(!currencyCheckArray.includes(val.symbol.slice(0, val.symbol.indexOf("/")))){
+               opt.value = val.symbol.slice(0, val.symbol.indexOf("/"))
+               opt.innerHTML = val.symbol.slice(0, val.symbol.indexOf("/"))
+               currencyCheckArray.push(val.symbol.slice(0, val.symbol.indexOf("/")))
+               baseSelect.appendChild(opt);
+               opt1.value = val.symbol.slice(0, val.symbol.indexOf("/"))
+               opt1.innerHTML = val.symbol.slice(0, val.symbol.indexOf("/"))
+               quoteSelect.appendChild(opt1)
+           }
+        })
+    })
+
 
 baseSelect.addEventListener("change", calculate)
 quoteSelect.addEventListener("change", calculate)
+toCurrencyInput.addEventListener("input", calculate)
+fromCurrencyInput.addEventListener("input", calculate)
 
 function calculate(){
     let toCurrency = baseSelect.value
@@ -32,10 +40,15 @@ function calculate(){
         }
     })
      .then(function(response){
-        
+        rate = response.data.rate
+        rateIndicator.innerHTML = `1 ${toCurrency} = ${rate} ${fromCurrency}`
+        fromCurrencyInput.value = (toCurrencyInput.value * rate).toFixed(2)
      })
+
 }
 
+
+calculate()
 
 
 
