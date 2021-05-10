@@ -28,6 +28,7 @@ body{
     background: transparent;
     border: 0;
     font-size: 1.5rem;
+    outline: none;
 }
 
 .box input{
@@ -35,5 +36,6 @@ body{
     border: 0;
     font-size: 1.5rem;
     text-align: right;
+    outline: none;
 }
 
