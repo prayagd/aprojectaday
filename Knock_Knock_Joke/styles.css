@@ -20,6 +20,7 @@ body{
     font-size: 2rem;
     padding: 0.5em;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 #generator:hover{
