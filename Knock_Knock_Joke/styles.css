@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ivory;
+}
+
+.flex__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#setup{
+    font-size: 4rem;
+}
+
+#generator{
+    font-size: 2rem;
+    padding: 0.5em;
+    border-radius: 15px;
+}
+
+#generator:hover{
+    background-color: lightcoral;
+}
