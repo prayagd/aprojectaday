@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  sans-serif;
+    background-color:peru;
+}
+
+.flex__container{
+    margin: 20px;
+    width: 70%;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    font-size: 3rem;
+}
+
+#search{
+    padding: 0.5em;
+    font-size: 1.5rem;
+    text-align: left;
+    border-radius: 50px;
+    outline: none;
+}
+
+#description{
+    padding: 2em;
+    text-align: left;
+    width: 70%;
+}
