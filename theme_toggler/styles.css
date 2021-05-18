@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding-right:  2em;
+    padding-left: 2em;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#theme{
+    align-self: flex-start;
+    padding: 1.2em;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
