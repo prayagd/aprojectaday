@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    padding: 4em 8em;
+    border-radius: 15px;
+}
+
