@@ -9,12 +9,18 @@ body{
     justify-content: center;
     align-items: center;
     background-color: black;
-    padding-right:  2em;
-    padding-left: 2em;
+    padding: 0.15em 0.3em;
     border-radius: 15px 15px 15px 15px;
 }
 
-#theme{
+#dark, #light{
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    padding: 0.2em;
+}
+
+/* #theme{
     align-self: flex-start;
     padding: 1.2em;
     border-radius: 50%;
@@ -22,4 +28,4 @@ body{
     outline: none;
     background-color: white;
     cursor: pointer;
-}
+} */
