@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Invoice</title>
+</head>
+<body>
+    <div>
+        <h2>Invoice</h2>
+        <div>
+            <p>T-shirts($50)</p>
+            <button id="tMinus">-</button>
+            <input type="text" value="1" id="tInput" disabled>
+            <button id="tAdd">+</button>
+            <p id="tshirtPrice" class="price">$50</p>
+        </div>
+        <div>
+            <p>Jeans($100)</p>
+            <button id="jMinus">-</button>
+            <input type="number" value="1" disabled>
+            <button id="jAdd">+</button>
+            <p id="jeansPrice" class="price">$100</p>
+        </div><div>
+            <p>Socks($10)</p>
+            <button id="sMinus">-</button>
+            <input type="number" value="1" disabled>
+            <button id="sAdd">+</button>
+            <p id="socksPrice" class="price">$10</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
