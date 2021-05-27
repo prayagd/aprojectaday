@@ -6,13 +6,9 @@ let jAdd = document.getElementById("jAdd")
 let sMinus = document.getElementById("sMinus")
 let sAdd = document.getElementById("sAdd")
 let prices = Array.from(document.getElementsByClassName("price"))
-let total = 0 
+let total = document.getElementById("total")
+let finalPrice = 0
 
-prices.forEach(function(val){
-    total += Number(val.textContent.slice(1))
-})
-
-console.log(total)
 
 function calculatePrice(price, input){
     if(price.id == "tshirtPrice"){
@@ -24,6 +20,11 @@ function calculatePrice(price, input){
     if(price.id == "socksPrice"){
         price.textContent = "$" + input.value * 10
     }
+    let finalPrice = 0
+    prices.forEach(function(val){
+        finalPrice += Number(val.textContent.slice(1))
+        total.textContent = "$" + finalPrice
+    })
 }
 
 

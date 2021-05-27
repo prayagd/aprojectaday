@@ -4,3 +4,14 @@ body{
     align-items: center;
     background-color: lightslategray;
 }
+
+.container{
+    display: flex;
+    
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
