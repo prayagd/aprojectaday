@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background{
+    background-image: url("https://images.unsplash.com/photo-1622016199677-992cb96c2b1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80");
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+    position: absolute;
+}
